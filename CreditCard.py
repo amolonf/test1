@@ -22,14 +22,14 @@ def Varify(card_number):
  #--condition 1--                 
  if card_number[0]!='4' and card_number[0]!='5' and card_number[0]!='6':
    print(card_number+": invalid1")
- #--condition 2--
- elif card_number.isdigit()==False:
-   if card_number.find("-")>0:
-      if card_number.count('-')==3:
-         if card_number[4]=='-' and card_number[9]=='-' and card_number[14]=='-':
-            card_number = card_number.replace("-","")
-            if Identical4(card_number)==0:
-               print(card_number+": invalid2")
+ #--check for the digit--
+ elif card_number.isdigit()==False:                    #--if number contains characters-
+   if card_number.find("-")>0:                         #--only '-' is allowed 
+      if card_number.count('-')==3:                    #--check for number of occurances
+         if card_number[4]=='-' and card_number[9]=='-' and card_number[14]=='-': 
+            card_number = card_number.replace("-","")  #--remove the '-' character from the card number 
+            if Identical4(card_number)==0:             #--check for the consecutive 4 occurances
+               print(card_number+": invalid2").         
             else:
                print(card_number+": valid1") 
          else:
@@ -38,10 +38,10 @@ def Varify(card_number):
          print(card_number+": invalid4")
    else:
       print(card_number+": invalid5")
- else:
-   if len(card_number)!=16:
+ else:                                                 #--card first number is 4/5/6
+   if len(card_number)!=16:                            #--check the card number lenght
       print(card_number+": invalid6")
-   elif Identical4(card_number)==0:
+   elif Identical4(card_number)==0:                    #--check for the consecutive 4 occurances
       print(card_number+": invalid7")
    else: 
       print(card_number+": valid2")
