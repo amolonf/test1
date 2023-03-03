@@ -1,5 +1,5 @@
 # Credicard verification program 
 
-python Credicard.py 
+How to run: ```python CreditCard.py``` 
 
-This program is use
+This program is used to verify the numbers entered by the user
