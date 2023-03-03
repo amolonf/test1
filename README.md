@@ -16,6 +16,9 @@ Therefore, I divided the static web-app deployment into two steps
 
 2. Deployment of web-app
 
-In the creation of the infrastructire I need information about how to create VM on AWS cloud. 
+In the creation of the infrastructire I need information about how to create VM on AWS cloud. Once you get that information then you can create the task to create the VM. For that purpose you need following information
+
+* AWS account 
+* 
 
 
