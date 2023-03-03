@@ -1,3 +1,5 @@
 # Credicard verification program 
 
-This program is used 
+python Credicard.py 
+
+This program is use
