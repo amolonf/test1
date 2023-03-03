@@ -1,0 +1,12 @@
+---
+# vars file for ec2-launch
+
+# vars file for launch-instance
+
+secret: "AWS account secret key"
+access: "AWS account access key"
+key: "mykey"
+subnet: "subnet-XXXXXX"                               
+sg: "sg-XXXXXXXXXXXXXXX"
+vm: "VM-type"
+tag: "tag to isolate resources"

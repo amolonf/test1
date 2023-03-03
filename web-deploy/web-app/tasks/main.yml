@@ -1,0 +1,19 @@
+---
+# Deploy the apache server to host web-app                                                                       
+- name: Installing Apache Web Server (httpd)
+  package:
+    name: httpd
+    state: present
+
+- name: Copying the static page 
+  copy:
+    content: "Configured by Ansible  Premchand {{ ansible_hostname }}"                  
+    dest: "/var/www/html/index.html"
+    src: "/tmp/static-page/index.html"
+    mode: 644
+
+- name: Enabling and starting the web server
+  service:
+    name: "httpd"
+    state: started
+    enabled: yes

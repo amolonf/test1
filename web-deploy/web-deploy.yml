@@ -1,0 +1,9 @@
+
+
+- hosts: localhost
+  roles:
+    - role: ec2-launch
+
+- hosts: localhost
+  roles:
+    - role: web-app 

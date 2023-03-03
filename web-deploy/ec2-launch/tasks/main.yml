@@ -1,0 +1,22 @@
+---
+# tasks file for ec2-launch
+
+
+- name: Launching the EC2 instances on AWS
+  ec2:
+    region: “regions-init"
+    image: "ami-XXXXXXXXX"
+    instance_type: "{{ vm }}"
+    count: 1
+    vpc_subnet_id: "{{ subnet }}"
+    group_id: "{{ sg }}"
+    instance_tags:
+      Name: "{{ tag }}"
+    key_name: "{{ key }}"
+    assign_public_ip: yes
+    state: present
+    wait: yes
+    aws_access_key: "{{ access }}"
+    aws_secret_key: "{{ secret }}"
+  register: ec2_logs
+
