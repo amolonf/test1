@@ -4,6 +4,6 @@
   roles:
     - role: ec2-launch
 
-- hosts: localhost
+- hosts: tag-ec2-instance
   roles:
     - role: web-app 
